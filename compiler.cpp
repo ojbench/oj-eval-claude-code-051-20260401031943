@@ -337,7 +337,8 @@ int main() {
 
     // Output in the required format
     for (size_t i = 0; i < memory.size(); i++) {
-        cout << memory[i] << " ";
+        if (i > 0 && i % 4 != 0) cout << " ";
+        cout << memory[i];
         if ((i + 1) % 4 == 0) cout << "\n";
     }
     if (memory.size() % 4 != 0) cout << "\n";
